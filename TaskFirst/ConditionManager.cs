@@ -27,14 +27,10 @@ namespace TaskFirst
          */
         public async void ChangePlayerState()
         {
-            await Task.Run(() =>
-            {
-                while (true)
-                {
-                    currentPlayerStates.AddRange(allState.FindAll(x => x.IsActiveted == true)) ;
-                    currentPlayerStates.RemoveAll(x => x.IsActiveted == false);
-                }
-            });
+            currentPlayerStates.AddRange(allState.FindAll(x => x.IsActiveted == true)) ;
+            currentPlayerStates.RemoveAll(x => x.IsActiveted == false);
+                
+         }
         } 
     }
 }
